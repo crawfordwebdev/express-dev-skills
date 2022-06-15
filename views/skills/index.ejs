@@ -15,6 +15,14 @@
   <h1>
     <%= title %>
   </h1>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li class="skills">
+				<%= skill %>
+      </li>
+    <% }) %>
+  </ul>
+
 </body>
 
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>
+    Modify Skill
+  </title>
+</head>
+
+<body>
+  <h1>
+    Modify Skill
+  </h1>
+  <h2>Skill #<%= skill._id %></h2>
+  <h3 class="skills"><%= skill.text %></h3>
+  <form 
+    action="/skills/<%= skill._id %>?_method=PUT"
+    class="update-form"
+    method="POST"
+  >
+    <input type="text" name="text" value="<%= skill.text %>">
+    <button type="submit">Update</button>
+  </form><br>
+	<a href="/skills/<%= skill._id %>">Go back to <%= skill.text %></a><br>
+  <a href="/skills">Go back to Skills</a>
+</body>
+
+</html>

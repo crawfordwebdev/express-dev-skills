@@ -17,11 +17,12 @@
   </h1>
   <ul>
     <% skills.forEach(skill => { %>
-      <li class="skills">
-				<%= skill %>
-      </li>
+      <li>
+				<%= skill.text %> 
+			</li>
     <% }) %>
   </ul>
+  <a href="/skills/new">Add a new skill</a>
 
 </body>
 
